@@ -1,0 +1,22 @@
+import { useState } from "react";
+
+function Counter() {
+    const [array, setArray] = useState([]);
+
+    return (
+        <div>
+            <h1>{array}</h1>
+            <button onClick={() => {
+                setArray((prevArray) => [...prevArray, '+1'])
+            }}>Increment</button>
+            <button onClick={() => {
+                setArray((prevArray) => [...prevArray, '-1'])
+            }}>Decrement</button>
+            <button onClick={() => {
+                setArray(() => [])
+            }}>Reset</button>
+        </div>
+    )
+}
+
+export default Counter;
